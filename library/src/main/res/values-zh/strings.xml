@@ -1,0 +1,7 @@
+<resources>
+    <string name="alert_dialog_util_yes">是</string>
+    <string name="alert_dialog_util_no">否</string>
+    <string name="alert_dialog_util_loading">加载中</string>
+    <string name="alert_dialog_util_please_wait">请稍等...</string>
+    <string name="alert_dialog_util_ok">OK</string>
+</resources>
