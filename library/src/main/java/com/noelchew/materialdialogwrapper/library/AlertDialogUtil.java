@@ -73,7 +73,20 @@ public class AlertDialogUtil {
                 .show();
     }
 
+    public static void showAlertDialogWithSelections(Context context, String title, ArrayList<String> selectionArrayList, DialogInterface.OnClickListener onClickListener) {
+        CharSequence[] tmpSelections = new CharSequence[selectionArrayList.size()];
+        for (int i = 0; i < selectionArrayList.size(); i++) {
+            tmpSelections[i] = selectionArrayList.get(i);
+        }
 
+        final CharSequence[] selections = tmpSelections;
+
+        AlertDialogWrapper.Builder builder = new AlertDialogWrapper.Builder(context);
+        builder.setTitle(title)
+                .setItems(selections, onClickListener)
+                .create()
+                .show();
+    }
 
     public static void showAlertDialogWithSelections(Context context, ArrayList<String> selectionArrayList, DialogInterface.OnClickListener onClickListener) {
         CharSequence[] tmpSelections = new CharSequence[selectionArrayList.size()];
