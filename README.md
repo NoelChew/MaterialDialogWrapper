@@ -1,3 +1,4 @@
+[![Release](https://jitpack.io/v/noelchew/MaterialDialogWrapper.svg)](https://jitpack.io/#noelchew/MaterialDialogWrapper)
 # MaterialDialogWrapper
 Wrapper around [material-dialogs](https://github.com/afollestad/material-dialogs)
 
