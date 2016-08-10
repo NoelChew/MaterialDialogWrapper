@@ -1,7 +1,7 @@
 # MaterialDialogWrapper
 Wrapper around [material-dialogs](https://github.com/afollestad/material-dialogs)
 
-[com.afollestad.material-dialogs:core:0.8.5.9](https://github.com/afollestad/material-dialogs/releases/tag/0.8.5.9)
+[com.afollestad.material-dialogs:core:0.9.0.0](https://github.com/afollestad/material-dialogs/releases/tag/0.9.0.0)
 
 ## Integration
 This library is hosted by jitpack.io.
@@ -19,7 +19,7 @@ allprojects {
 Application level gradle:
 ```
 dependencies {
-    compile 'com.github.noelchew:MaterialDialogWrapper:0.1.0'
+    compile 'com.github.noelchew:MaterialDialogWrapper:0.1.3'
 }
 ```
 Note: do not add the jitpack.io repository under buildscript
