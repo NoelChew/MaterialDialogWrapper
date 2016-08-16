@@ -20,7 +20,7 @@ allprojects {
 Application level gradle:
 ```
 dependencies {
-    compile 'com.github.noelchew:MaterialDialogWrapper:0.1.3'
+    compile 'com.github.noelchew:MaterialDialogWrapper:0.1.6'
 }
 ```
 Note: do not add the jitpack.io repository under buildscript
