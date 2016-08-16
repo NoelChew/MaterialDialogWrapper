@@ -33,9 +33,6 @@ public class MaterialDialogWrapper {
     }
 
 
-
-
-
     public static void showAlertDialog(Context context, int message) {
         showAlertDialog(context, context.getString(message));
     }
@@ -58,14 +55,12 @@ public class MaterialDialogWrapper {
     }
 
 
-
-
-
-
-
-
     public static void showAlertDialogWithSelections(Context context, int title, ArrayList<String> selectionArrayList, MaterialDialog.ListCallback listCallback) {
         showAlertDialogWithSelections(context, context.getString(title), selectionArrayList, listCallback);
+    }
+
+    public static void showAlertDialogWithSelections(Context context, int title, int message, ArrayList<String> selectionArrayList, MaterialDialog.ListCallback listCallback) {
+        showAlertDialogWithSelections(context, context.getString(title), context.getString(message), selectionArrayList, listCallback);
     }
 
     public static void showAlertDialogWithSelections(Context context, int title, MaterialDialog.ListCallback listCallback, String... selections) {
@@ -73,9 +68,19 @@ public class MaterialDialogWrapper {
         showAlertDialogWithSelections(context, context.getString(title), selectionArrayList, listCallback);
     }
 
+    public static void showAlertDialogWithSelections(Context context, int title, int message, MaterialDialog.ListCallback listCallback, String... selections) {
+        ArrayList<String> selectionArrayList = new ArrayList<>(Arrays.asList(selections));
+        showAlertDialogWithSelections(context, context.getString(title), context.getString(message), selectionArrayList, listCallback);
+    }
+
     public static void showAlertDialogWithSelections(Context context, String title, MaterialDialog.ListCallback listCallback, String... selections) {
         ArrayList<String> selectionArrayList = new ArrayList<>(Arrays.asList(selections));
         showAlertDialogWithSelections(context, title, selectionArrayList, listCallback);
+    }
+
+    public static void showAlertDialogWithSelections(Context context, String title, String message, MaterialDialog.ListCallback listCallback, String... selections) {
+        ArrayList<String> selectionArrayList = new ArrayList<>(Arrays.asList(selections));
+        showAlertDialogWithSelections(context, title, message, selectionArrayList, listCallback);
     }
 
     public static void showAlertDialogWithSelections(Context context, ArrayList<String> selectionArrayList, MaterialDialog.ListCallback listCallback) {
@@ -83,6 +88,10 @@ public class MaterialDialogWrapper {
     }
 
     public static void showAlertDialogWithSelections(Context context, String title, ArrayList<String> selectionArrayList, MaterialDialog.ListCallback listCallback) {
+        showAlertDialogWithSelections(context, title, null, selectionArrayList, listCallback);
+    }
+
+    public static void showAlertDialogWithSelections(Context context, String title, String message, ArrayList<String> selectionArrayList, MaterialDialog.ListCallback listCallback) {
         CharSequence[] tmpSelections = new CharSequence[selectionArrayList.size()];
         for (int i = 0; i < selectionArrayList.size(); i++) {
             tmpSelections[i] = selectionArrayList.get(i);
@@ -95,6 +104,11 @@ public class MaterialDialogWrapper {
         if (!TextUtils.isEmpty(title)) {
             builder.title(title);
         }
+
+        if (!TextUtils.isEmpty(message)) {
+            builder.content(message);
+        }
+
         builder.items(selections)
                 .itemsCallback(listCallback)
                 .show();
