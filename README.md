@@ -1,9 +1,13 @@
 # MaterialDialogWrapper
 [![Release](https://jitpack.io/v/noelchew/MaterialDialogWrapper.svg)](https://jitpack.io/#noelchew/MaterialDialogWrapper)
 
-Wrapper around [material-dialogs](https://github.com/afollestad/material-dialogs)
+Wrapper around [material-dialogs](https://github.com/afollestad/material-dialogs) [(core:0.9.0.0)](https://github.com/afollestad/material-dialogs/releases/tag/0.9.0.0)
 
-[com.afollestad.material-dialogs:core:0.9.0.0](https://github.com/afollestad/material-dialogs/releases/tag/0.9.0.0)
+## Some of the Predefined Methods
+- showAlertDialogWithOK(Context context, int title, int message)
+- showAlertDialog(Context context, int title, int message)
+- showAlertDialogWithSelections(Context context, int title, ArrayList<String> selectionArrayList, MaterialDialog.ListCallback listCallback)
+- showAlertDialogWithSelections(Context context, int title, MaterialDialog.ListCallback listCallback, String... selections)
 
 ## Integration
 This library is hosted by jitpack.io.
